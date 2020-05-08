@@ -11,6 +11,8 @@ private:
 	vector<BenhNhan*> ListBenhNhan;
 public:
 	void Nhap();
+	void Hienthi(ostream & os);
+	void Hienthi(ostream & os);
 	void TimKiem();
 	void Thongke();
 };

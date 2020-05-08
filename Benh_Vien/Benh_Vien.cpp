@@ -14,15 +14,35 @@ void Benh_Vien::Nhap()
 		switch (Luachon)
 		{
 		case 1:
-			
+			benhnhan = new Benh_Nhan_Noi_tru(); benhnhan->Nhap();ListBenhNhan.push_back(benhnhan);
+			break;
+		case 2:
+			benhnhan = new Benh_Nhan_Ngoai_Tru(); benhnhan->Nhap();ListBenhNhan.push_back(benhnhan);
+			break;
+		case 3:
+			benhnhan = new Benh_Nhan_CV(); benhnhan->Nhap();ListBenhNhan.push_back(benhnhan);
+			break;
+		case 4:
+			break;
 		default:
 			break;
 		}
-	}while(Luachon!=3)
+	} while (Luachon != 4);
+}
+
+void Benh_Vien::Hienthi(ostream & os)
+{
+	for (int i = 0; i < ListBenhNhan.size(); i++)
+	{
+		ListBenhNhan[i]->Hienthi(os);
+	}
 }
 
 void Benh_Vien::TimKiem()
 {
+
+
+
 }
 
 void Benh_Vien::Thongke()
