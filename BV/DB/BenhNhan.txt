@@ -1,3 +1,6 @@
 1,Nguyen Thi B,Nu,Khong co benh,1
 2,Nguyen Thi B,Nu,Khong co benh,2
 3,Nguyen Thanh Hai,Nam,Tieu duong,1
+4,Thi C,Nu,Mang thai,1
+5,Test,Nam,Test benh,2
+6,Phuong An,Nu,Khong benh,2

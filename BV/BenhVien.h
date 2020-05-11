@@ -41,7 +41,6 @@ public:
         std::ifstream file("DB/BenhNhan.txt");
         std::string str; 
         while (std::getline(file, str)) {
-        // process string ...
             vector<string> v = split (str, ',');
             BenhNhan bn;
             bn.setMaSo(atoi(v[0].c_str()));
@@ -66,20 +65,14 @@ public:
             listBenhNhanNoiTru.push_back (bnnt);
         }
     }
-    void save(){
-        // ofstream myfile;
-        // myfile.open ("abc.txt", std::ios_base::app);
-        // myfile << maSo << "," << hoTen << "," << gioiTinh << "," << chanDoan << "\n"; 
-        // myfile.close();
-    }
     int getMaBNMoi(){
-        int maBNMoi = 1;
+        int maBNMoi = 0;
         for (BenhNhan bn : listBenhNhan) {
-           if(maBNMoi > bn.getMaSo()){
+           if(maBNMoi < bn.getMaSo()){
                maBNMoi = bn.getMaSo();
            }
         }
-        return maBNMoi;
+        return maBNMoi + 1;
     }
     BenhNhanNoiTru getBenhNhanNoiTru(int maBenhNhan){
         BenhNhanNoiTru bnnoitru;
@@ -99,6 +92,9 @@ public:
                 cout<<bn.xuat();
                 if(bnnoitru.getMaSo()){
                     cout<<bnnoitru.xuat();
+                }
+                else{
+                    cout<<"\n";
                 }
             }
             else{

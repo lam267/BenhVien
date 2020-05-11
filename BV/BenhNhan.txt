@@ -1,3 +1,4 @@
 1,Nguyen Thi B,Nu,Khong co benh
 2,Nguyen Thi B,Nu,Khong co benh
 3,Nguyen Thanh Hai,Nam,Tieu duong
+1,Thi C,Nu,Mang thai

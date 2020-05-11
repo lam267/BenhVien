@@ -78,6 +78,11 @@ public:
         cout << "Nhap Chan Doan:";
         getline(cin, chanDoan);
 
+        cout << "Loai benh nhan:";
+        string lBenhNhan;
+        getline(cin, lBenhNhan);
+        loaiBenhNhan = atoi(lBenhNhan.c_str());
+
 
     }
     vector<string> split (const string &s, char delim) {
@@ -102,8 +107,8 @@ public:
     }
     void save(){
         ofstream myfile;
-        myfile.open ("BenhNhan.txt", std::ios_base::app);
-        myfile << maSo << "," << hoTen << "," << gioiTinh << "," << chanDoan << "\n"; 
+        myfile.open ("DB/BenhNhan.txt", std::ios_base::app);
+        myfile << maSo << "," << hoTen << "," << gioiTinh << "," << chanDoan << "," << loaiBenhNhan << "\n"; 
         myfile.close();
     }
     string xuat(){
@@ -114,7 +119,7 @@ public:
         else{
             loai = "Ngoai tru";
         }
-        return "Ma HS: " + to_string(getMaSo()) + ", Ho ten: " + getHoTen() + ", Gioi tinh: " + getGioiTinh() + ", Chan doan: " + getChanDoan() + ", Loai benh nhan: " + loai + "\n"; 
+        return "Ma HS: " + to_string(getMaSo()) + ", Ho ten: " + getHoTen() + ", Gioi tinh: " + getGioiTinh() + ", Chan doan: " + getChanDoan() + ", Loai benh nhan: " + loai; 
     }
 }; 
   
