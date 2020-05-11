@@ -10,6 +10,7 @@ private:
 	string hoTen;
 	string gioiTinh;
 	string chanDoan;
+    int loaiBenhNhan;
   
 public: 
     // Parameterized Constructor 
@@ -40,6 +41,10 @@ public:
     void setChanDoan(string cDoan){
         chanDoan = cDoan; 
     }
+    void setLoaiBenhNhan(int lBenhNhan){
+        loaiBenhNhan = lBenhNhan; 
+    }
+    
     int getMaSo() 
     { 
         return maSo; 
@@ -48,6 +53,18 @@ public:
     { 
         return hoTen; 
     } 
+    string getGioiTinh() 
+    { 
+        return gioiTinh; 
+    } 
+    string getChanDoan() 
+    { 
+        return chanDoan; 
+    } 
+    int getLoaiBenhNhan() 
+    { 
+        return loaiBenhNhan; 
+    }  
 
     void nhap(int maso){
         maSo = maso;
@@ -89,8 +106,15 @@ public:
         myfile << maSo << "," << hoTen << "," << gioiTinh << "," << chanDoan << "\n"; 
         myfile.close();
     }
-    void Xuat(){
-        cout << "Ma HS: " << maSo << ", Ho ten: " << hoTen << ", Gioi tinh: " << gioiTinh << ", Chan doan: " << chanDoan << "\n"; 
+    string xuat(){
+        string loai = "";
+        if(getLoaiBenhNhan() == 1){
+            loai = "Noi tru";
+        }
+        else{
+            loai = "Ngoai tru";
+        }
+        return "Ma HS: " + to_string(getMaSo()) + ", Ho ten: " + getHoTen() + ", Gioi tinh: " + getGioiTinh() + ", Chan doan: " + getChanDoan() + ", Loai benh nhan: " + loai + "\n"; 
     }
 }; 
   

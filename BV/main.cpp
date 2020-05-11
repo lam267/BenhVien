@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdio>
-// #include "BenhNhan.h"
 #include "BenhVien.h"
 using namespace std;
 
@@ -14,7 +13,7 @@ int main() {
 
     BenhVien bv;
     bv.read();
-    // bv.nhap(3);
+    // bv.nhap();
     bv.xuat();
     // bn.Nhap();
     // bn.save();
