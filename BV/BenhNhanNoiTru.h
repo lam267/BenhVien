@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <fstream>
 #include <vector>
+#include "DateTime.h"
 #include <sstream>
 using namespace std; 
   
@@ -9,6 +10,8 @@ private:
     int maSo=0;
 	string khoa;
 	int soGiuong;
+    DateTime ngayNhapVien;
+	DateTime ngayXuatVien;
   
 public: 
     // Parameterized Constructor 
@@ -54,6 +57,12 @@ public:
         string sGiuong;
         getline(cin, sGiuong);
         soGiuong = atoi(sGiuong.c_str());
+
+        cout << "Ngay nhap vien:";
+        ngayNhapVien.nhap();
+
+        cout << "Ngay xuat vien:";
+        ngayXuatVien.nhap();
     }
     vector<string> split (const string &s, char delim) {
         vector<string> result;
@@ -78,7 +87,7 @@ public:
     void save(){
         ofstream myfile;
         myfile.open ("BenhNhanNoiTru.txt", std::ios_base::app);
-        myfile << getMaSo() << "," << getKhoa() << "," << getSoGiuong() << "\n"; 
+        myfile << getMaSo() << "," << getKhoa() << "," << ngayNhapVien.getNgay() << "," << ngayXuatVien.getNgay() << "," << getSoGiuong() << "\n"; 
         myfile.close();
     }
     string xuat(){

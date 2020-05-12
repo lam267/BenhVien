@@ -4,3 +4,4 @@
 4,Thi C,Nu,Mang thai,1
 5,Test,Nam,Test benh,2
 6,Phuong An,Nu,Khong benh,2
+7,Tuong Vi,Nu,Dau bung,2,6/2/2000

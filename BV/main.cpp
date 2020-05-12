@@ -3,13 +3,34 @@
 #include "BenhVien.h"
 using namespace std;
 
-int main() {
-
-
+int main() {    
+    
     BenhVien bv;
     bv.read();
-    // bv.nhap();
-    bv.xuat();
+    // bv.xuat();
     // bn.save();
+    int Luachon;
+	do {
+		cout << "----------------Menu-----------------";
+		cout << "1.Nhap benh nhan:\n\n";
+		cout << "2.Tim kiem benh nhan:\n";
+		cout << "3.Thong ke benh nhan:\n";
+		cout << "4.tro ve:\n";
+		cout << "Nhap Lua chon:";cin >> Luachon;
+		switch (Luachon)
+		{
+		case 1:
+			bv.nhap();
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		default:
+			break;
+		}
+	} while (Luachon != 4);
 
 }
