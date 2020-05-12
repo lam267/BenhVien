@@ -46,9 +46,10 @@ public:
         return soGiuong; 
     } 
 
-    void nhap(int ms){
-        maSo = ms;
-
+    void nhap(int maso){
+        maSo = maso;
+        cout << "Ma so:"<<maSo;
+        cin.ignore();
         cout << "Nhap Khoa:";
         getline(cin, khoa);
 
@@ -86,7 +87,7 @@ public:
     }
     void save(){
         ofstream myfile;
-        myfile.open ("BenhNhanNoiTru.txt", std::ios_base::app);
+        myfile.open ("DB/BenhNhanNoiTru.txt", std::ios_base::app);
         myfile << getMaSo() << "," << getKhoa() << "," << ngayNhapVien.getNgay() << "," << ngayXuatVien.getNgay() << "," << getSoGiuong() << "\n"; 
         myfile.close();
     }

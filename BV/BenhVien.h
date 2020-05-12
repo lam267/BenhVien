@@ -2,7 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
-#include "BenhNhan.h"
+#include "BenhNhan.cpp"
 #include "BenhNhanNoiTru.h"
 using namespace std; 
   
@@ -16,11 +16,27 @@ public:
 
     }
 
-    void nhap(){
+    void nhapBenhNhan(){
         int maso = getMaBNMoi();
+        int loaiBenhNhan;
+        cout << "----------------Chon loai benh nhan-----------------\n";
+		cout << "1.Benh nhan noi tru:\n";
+		cout << "2.Benh nhan ngoai tru:\n";
+		cout << "3.Benh nhan chuyen vien:\n";
+		cout << "4.Tro ve:\n";
+		cout << "Nhap Lua chon:";cin >> loaiBenhNhan;
         BenhNhan benhnhan;
-        benhnhan.nhap(maso);
+        benhnhan.nhap(maso, loaiBenhNhan);
         benhnhan.save();
+        if(loaiBenhNhan == 1){
+            BenhNhanNoiTru bnnoitru;
+            bnnoitru.nhap(maso);
+            bnnoitru.save();
+        }
+        else{
+
+        }
+       
     }
     vector<string> split (const string &s, char delim) {
         vector<string> result;

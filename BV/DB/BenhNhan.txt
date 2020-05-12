@@ -5,3 +5,5 @@
 5,Test,Nam,Test benh,2
 6,Phuong An,Nu,Khong benh,2
 7,Tuong Vi,Nu,Dau bung,2,6/2/2000
+8,Nguyen Van Thuy,Nam,Tim mach,12/12/1997,1
+9,Van C,Nu,Kim ,2/2/2020,171671548
